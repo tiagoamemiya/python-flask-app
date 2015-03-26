@@ -10,6 +10,10 @@ app = Flask(__name__)
 def view_home():
 	return 'Blog Home Page'
 
+@app.route('/sobre')
+def view_about():
+	return 'About Page'
+
 @app.route('/post/<post_id>')
 def view_post(post_id):
 	return 'Post %s' % post_id
